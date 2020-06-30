@@ -12,7 +12,7 @@ exports.book_list = (req, res) => {
 /* Display detail page for a specific Book */
 exports.book_detail = (req, res) => {
 	res.send('NOT IMPLEMENTED: Book detail: ' + res.params.id);
-}
+};
 
 /* Display Book create form on GET */
 exports.book_create_get = (req, res) => {
