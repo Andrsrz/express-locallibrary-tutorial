@@ -31,7 +31,7 @@ AuthorSchema.virtual('lifespan').get(() => {
 
 /* Virtual for author's url */
 AuthorSchema.virtual('url').get(() => {
-	return 'catalog/author/' + this._id;
+	return '/catalog/author/' + this._id;
 });
 
 /* Export Model */
