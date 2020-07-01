@@ -26,12 +26,12 @@ AuthorSchema.virtual('name').get(function(){
 });
 
 /* Virtual for author's lifespan */
-AuthorSchema.virtual('lifespan').get(() => {
+AuthorSchema.virtual('lifespan').get(function(){
 	return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
 });
 
 /* Virtual for author's url */
-AuthorSchema.virtual('url').get(() => {
+AuthorSchema.virtual('url').get(function(){
 	return '/catalog/author/' + this._id;
 });
 
