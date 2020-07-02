@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1 #{title}
+
+	form(method='POST' action='')
+		div.form-group
+			label(for='title') Title:
+			input#title.form-control(type='text', placeholder='The Dark Tower I'
+			name='title' value=(undefined===book ? '' : book.title), required=true,
+			autofocus)
+		button.btn.btn-primary(type='submit') Submit
+
+	if errors
+		ul
+			for error in errors
+				li!= error.msg
