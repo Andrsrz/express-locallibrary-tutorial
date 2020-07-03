@@ -120,7 +120,7 @@ exports.book_create_post = [
 			genre: req.body.genre
 		});
 
-		if(!erros.isEmpty()){
+		if(!errors.isEmpty()){
 			/* There are errors. Render form again with sanitized
 			 * values/errors messages. */
 			/* Get all authors and genres for form */
