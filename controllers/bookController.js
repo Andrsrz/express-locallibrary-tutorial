@@ -107,6 +107,7 @@ exports.book_create_post = [
 	validator.body('author').trim().isLength({ min: 1 }).escape(),
 	validator.body('summary').trim().isLength({ min: 1 }).escape(),
 	validator.body('isbn').trim().isLength({ min: 1 }).escape(),
+	/* Process request after validation */
 	(req, res, next) => {
 		/* Extract the validation errors from a request */
 		const errors = validationResult(req);
