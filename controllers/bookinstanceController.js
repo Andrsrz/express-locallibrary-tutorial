@@ -169,7 +169,7 @@ exports.bookinstance_update_post = [
 			imprint: req.body.imprint,
 			status: req.body.status,
 			due_back: req.body.due_back,
-			_id: req.params.id
+			_id: req.params.id /* Required or a new ID will be assigned! */
 		});
 
 		if(!errors.isEmpty()){
